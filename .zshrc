@@ -115,3 +115,12 @@ alias c='curl cip.cc'
 alias ra='ranger'
 alias neo='neofetch'
 
+# git 从kgithub克隆 并添加源地址为git分支
+function clone()
+{
+    echo $1
+    echo ${1//github/kgithub}
+    git clone ${1//github/kgithub}
+    cd ${1##*/}
+    git remote add git $1
+}
