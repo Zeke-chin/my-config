@@ -116,11 +116,19 @@ alias ra='ranger'
 alias neo='neofetch'
 
 # git 从kgithub克隆 并添加源地址为git分支
-function clone()
-{
-    echo $1
-    echo ${1//github/kgithub}
-    git clone ${1//github/kgithub}
-    cd ${1##*/}
+function clone(){
+    echo "$1\n${1//github/kgithub}"
+    if (($#==2));then
+        echo $2
+        git clone ${1//github/kgithub} $2
+        p=$2
+    else
+        git clone ${1//github/kgithub}
+        p=$1
+    fi
+    echo "克隆完成...添加git分支"
+    p=${p##*/}
+    p=${p%.*}
+    cd $p
     git remote add git $1
 }
