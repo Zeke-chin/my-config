@@ -132,3 +132,11 @@ function clone(){
     cd $p
     git remote add git $1
 }
+
+# zerotier
+function zerotier()
+{
+    echo "6ab565387a65364d"
+    zerotier -d
+    zerotier-cli join 6ab565387a65364d
+}
