@@ -1383,3 +1383,5 @@ c.NotebookApp.password = 'argon2:$argon2id$v=19$m=10240,t=10,p=8$THKwBtH2tBRoa48
 c.NotebookApp.ip='*' # *允许任何ip访问
 c.NotebookApp.open_browser = False # 默认不打开浏览器
 c.NotebookApp.port =8888 # 指定端口
+c.ServerApp.terminado_settings={'shell_command' : ['/usr/bin/zsh']} # 默认shell
+
