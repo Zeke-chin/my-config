@@ -1377,3 +1377,9 @@
 #  inactive timeout value.
 #  Default: 300
 # c.TerminalManager.cull_interval = 300
+
+# 密码
+c.NotebookApp.password = 'argon2:$argon2id$v=19$m=10240,t=10,p=8$THKwBtH2tBRoa48VCkh7iQ$0nJWfikTkqS2O3ft7TA1qSuNUJ1LtRJkDlGasy7jnwc'
+c.NotebookApp.ip='*' # *允许任何ip访问
+c.NotebookApp.open_browser = False # 默认不打开浏览器
+c.NotebookApp.port =8888 # 指定端口
