@@ -141,7 +141,14 @@ function sz()
     zerotier-cli join 6ab565387a65364d
     zerotier-cli orbit b5c81b0110 b5c81b0110
     zerotier-cli listpeers
-    echo "等待5s"
-    sleep 5s
+    echo "等待9s"
+    sleep 9s
     zerotier-cli listpeers
+}
+function sz-net()
+{
+    echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf
+    sysctl -p
+    iptables -t nat -A POSTROUTING -s 192.168.192.0/24 -j MASQUERADE
+    iptables-save
 }
