@@ -134,9 +134,13 @@ function clone(){
 }
 
 # zerotier
-function zerotier()
+zerotier-one -d
+function sz()
 {
     echo "6ab565387a65364d"
-    zerotier -d
     zerotier-cli join 6ab565387a65364d
+    zerotier-cli orbit b5c81b0110 b5c81b0110
+    zerotier-cli listpeers
+    echo "等待5s"
+    zerotier-cli listpeers
 }
