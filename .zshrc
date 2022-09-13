@@ -142,5 +142,6 @@ function sz()
     zerotier-cli orbit b5c81b0110 b5c81b0110
     zerotier-cli listpeers
     echo "等待5s"
+    sleep 5s
     zerotier-cli listpeers
 }
