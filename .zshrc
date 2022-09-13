@@ -147,6 +147,9 @@ function sz()
 }
 function sz-net()
 {
+# 先在zerotier控制台中，添加静态路由
+# 再运行
+# 速度要快 姿势要帅 大概会40个ping左右就会建立连接
     echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf
     sysctl -p
     iptables -t nat -A POSTROUTING -s 192.168.192.0/24 -j MASQUERADE
