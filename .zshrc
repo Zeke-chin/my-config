@@ -134,7 +134,7 @@ function clone(){
 }
 
 # zerotier
-zerotier-one -d
+# zerotier-one -d
 function sz()
 {
     echo "6ab565387a65364d"
@@ -155,3 +155,4 @@ function sz-net()
     iptables -t nat -A POSTROUTING -s 192.168.192.0/24 -j MASQUERADE
     iptables-save
 }
+
