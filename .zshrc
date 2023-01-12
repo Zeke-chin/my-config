@@ -115,6 +115,13 @@ alias c='curl cip.cc'
 alias ra='ranger'
 alias neo='neofetch'
 
+# docker
+alias deit='docker exec -i -t'
+alias dc='docker-compose'
+alias dcud='docker-compose up -d'
+alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias dcgpu='zsh /home/sxkj/cgl/dcgpu'
+
 # git 从kgithub克隆 并添加源地址为git分支
 function clone(){
     echo "$1\n${1//github/kgithub}"
