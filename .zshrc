@@ -146,7 +146,7 @@ function sz()
 {
     echo "6ab565387a65364d"
     zerotier-cli join 6ab565387a65364d
-    zerotier-cli orbit b5c81b0110 b5c81b0110
+    zerotier-cli orbit 416b8f1229 416b8f1229
     zerotier-cli listpeers
     echo "等待9s"
     sleep 9s
